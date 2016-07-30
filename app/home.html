@@ -1,0 +1,163 @@
+
+
+<!-- Navigation bar -->
+    <div id="main_navbar">
+      <nav class="navbar navbar-default" role="navigation">
+
+        <div class="navbar-header">
+          <!-- Responsive navigation bar on mobile devices -->
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="glyphicon glyphicon-align-justify"></span><!-- Responsive button icon -->
+          </button>
+        </div>
+
+        <nav class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="current">
+              <!-- Highlighted menu for current page -->
+              <a href="#" id="homenav">Home</a>
+            </li>
+            <li>
+              <a href="#" id="aboutnav">Automation</a>
+            </li>
+          </ul>
+                  <button type="button" style="margin-top:15px" class="btn btn-warning pull-right" data-toggle="modal" data-target="#myModal">Add IP Address</button>
+        </nav>
+      </nav>
+    </div>
+
+              <br>
+              <div class="container">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>State</th>
+                          <th>Status</th>
+                          <th>Host</th>
+                          <th>Provisioned Space</th>
+                          <th>Used Space</th>
+                          <th>Host CPU</th>
+                          <th>Host Mem</th>
+                          <th>Guest Mem</th>
+                          <th>Notes</th>
+                          <th>Alarm Actions</th>
+                          <th> </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>John</td>
+                          <td>Powered On</td>
+                          <td><span class="glyphicon glyphicon-ok-sign" style="color: green;"></span> Normal</td>
+                          <td>Unknown</td>
+                          <td>100 GB</td>
+                          <td>100 GB</td>
+                          <td>550</td>
+                           <td>8232</td>
+                           <td>5</td>
+                           <td></td>
+                           <td>Enabled</td>
+                           <td (click)="deleteRow()"><span style="color:red" class="glyphicon glyphicon-trashglyphicon glyphicon-trash"></span></td>
+                        </tr>
+                        <tr>
+                          <td>Mary</td>
+                          <td>Powered On</td>
+                          <td><span class="glyphicon glyphicon-ok-sign" style="color: green;"></span> Normal</td>
+                           <td>Unknown</td>
+                           <td>70 GB</td>
+                           <td>30 GB</td>
+                           <td>570</td>
+                           <td>2323</td>
+                           <td>3</td>
+                           <td></td>
+                           <td>Enabled</td>
+                           <td (click)="deleteRow()"><span style="color:red" class="glyphicon glyphicon-trashglyphicon glyphicon-trash"></span></td>
+                        </tr>
+                        <tr>
+                          <td>July</td>
+                          <td>Powered On</td>
+                          <td><span class="glyphicon glyphicon-ok-sign" style="color: green;"></span> Normal</td>
+                          <td>Unknown</td>
+                           <td>30 GB</td>
+                           <td>73 GB</td>
+                           <td>580</td>
+                           <td>3434</td>
+                           <td>1</td>
+                           <td></td>
+                           <td>Enabled</td>
+                           <td (click)="deleteRow()"><span style="color:red" class="glyphicon glyphicon-trashglyphicon glyphicon-trash"></span></td>
+                        </tr>
+                        <tr>
+                          <td>John</td>
+                          <td>Powered On</td>
+                          <td><span class="glyphicon glyphicon-ok-sign" style="color: green;"></span> Normal</td>
+                          <td>Unknown</td>
+                          <td>100 GB</td>
+                          <td>100 GB</td>
+                          <td>550</td>
+                           <td>8232</td>
+                           <td>5</td>
+                           <td></td>
+                           <td>Enabled</td>
+                           <td (click)="deleteRow()"><span style="color:red" class="glyphicon glyphicon-trashglyphicon glyphicon-trash"></span></td>
+                        </tr>
+                        <tr>
+                          <td>Mary</td>
+                          <td>Powered On</td>
+                          <td><span class="glyphicon glyphicon-ok-sign" style="color: green;"></span> Normal</td>
+                           <td>Unknown</td>
+                           <td>70 GB</td>
+                           <td>30 GB</td>
+                           <td>570</td>
+                           <td>2323</td>
+                           <td>3</td>
+                           <td></td>
+                           <td>Enabled</td>
+                           <td (click)="deleteRow()"><span style="color:red" class="glyphicon glyphicon-trashglyphicon glyphicon-trash"></span></td>
+                        </tr>
+                        <tr>
+                          <td>July</td>
+                          <td>Powered On</td>
+                          <td><span class="glyphicon glyphicon-ok-sign" style="color: green;"></span> Normal</td>
+                          <td>Unknown</td>
+                           <td>30 GB</td>
+                           <td>73 GB</td>
+                           <td>580</td>
+                           <td>3434</td>
+                           <td>1</td>
+                           <td></td>
+                           <td>Enabled</td>
+                           <td (click)="deleteRow()"><span style="color:red" class="glyphicon glyphicon-trashglyphicon glyphicon-trash"></span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+  <!-- Trigger the modal with a button -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Add IP Address</h4>
+        </div>
+        <div class="modal-body">
+         <div class="form-group">
+            <label for="inputdefault">Name</label>
+            <input class="form-control" id="name" type="text">
+          </div>
+          <div class="form-group">
+            <label for="inputdefault">IP Address</label>
+            <input class="form-control" id="ipAddress" type="text">
+          </div>
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
